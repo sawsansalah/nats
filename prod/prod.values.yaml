@@ -1,0 +1,21 @@
+auth:
+  enabled: true
+  nkeys:
+    users:
+     - nkey: UA2AISP5FPTMG6NY4DMCX6OHX7KSJVGAL2HHEEHHFYUML4A52RIMLY7P
+       permissions:
+         subscribe: [">"]
+         publish: [">"]
+     - nkey: UBX4FXU73NOV7QCYQ7IROBXJL54YRNF5YVGK7SN5DSSG4XJLW7ILTKV3
+       permissions:
+         subscribe: [">"]
+         publish: ["$JS.API.STREAM.LIST", "PWO.>","pwo.>","subjects.>"]
+     - nkey: UBX4FXU73NOV7QCYQ7IROBXJL54YRNF5YVGK7SN5DSSG4XJLW7ILTKV3
+       permissions:
+         subscribe: [">"]
+         publish: ["$JS.API.STREAM.LIST", "appolo.>", "orchestration.>"]     
+nats:
+  jetstream:
+    enabled: true
+    fileStorage:
+      enabled: true

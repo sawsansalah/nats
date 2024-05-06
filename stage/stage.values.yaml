@@ -1,0 +1,10 @@
+  jetstream:
+    enabled: enable
+
+    fileStore:
+      enabled: true
+      dir: /data
+      pvc:
+        enabled: true
+        size: 15Gi
+        storageClassName: normal
